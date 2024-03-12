@@ -1,5 +1,6 @@
 import React from "react";
 import SideBar from "../components/SideBar";
+import ChatPage from "./ChatPage";
 
 function mainPage() {
   return (
@@ -7,8 +8,9 @@ function mainPage() {
       <div className="grid grid-cols-[1fr,3fr] w-full h-full">
         {" "}
         <SideBar />
-        <div className="flex items-center justify-center">
-          
+        <div className="flex ">
+          <p></p>
+          <ChatPage/>
         </div>
       </div>
     </div>

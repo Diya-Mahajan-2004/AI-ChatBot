@@ -5,7 +5,7 @@ import { IoIosLogOut } from "react-icons/io";
 
 function SideBar() {
   return (
-    <div className="md:w-[336px] w-[200px] shadow-lg border-r-2 border-cyan-300/25 flex flex-col justify-between">
+    <div className="md:w-[336px] w-[200px] shadow-2xl shadow-[#BAD5FF] border-r-1 border-white-300/25 flex flex-col justify-between">
       {/* Sidebar Content */}
       <div className="p-4 overflow-y-auto">
         {/* Upper Part */}
@@ -45,13 +45,13 @@ function SideBar() {
             <span className="ml-2 text-gray-700">Log out</span>
           </div>
           <div className="flex items-center">
-            <button className="rounded-full py-2 px-3 bg-cyan-700 text-white">N</button>
+            <button className="rounded-full py-[9px] px-[15px] bg-cyan-700 text-white">N</button>
             <span className="ml-2 text-gray-700">Name</span>
           </div>
         </div>
       </div>
     </div>
   );
-}
+  }
 
 export default SideBar;
