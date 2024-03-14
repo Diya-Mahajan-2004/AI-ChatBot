@@ -1,7 +1,13 @@
 import React from "react"; // Import user avatar image
 import aiLogo from "../assets/aiLogo.png";
+import React, { useContext } from "react";
+
 
 function ChatPage() {
+
+  const { onSent, showResult, loading, resultData, setinput, Input } = useContext(Context)
+
+
   return (
     <div className="flex flex-col h-screen ">
       {" "}

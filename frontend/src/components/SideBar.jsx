@@ -4,6 +4,10 @@ import { CiCirclePlus, CiSettings } from "react-icons/ci";
 import { IoIosLogOut } from "react-icons/io";
 
 function SideBar() {
+
+  const {recentPrompt}
+
+ 
   return (
     <div className="md:w-[336px] w-[200px] shadow-2xl shadow-[#BAD5FF] border-r-1 border-white-300/25 flex flex-col justify-between">
       {/* Sidebar Content */}
