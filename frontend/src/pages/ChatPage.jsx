@@ -1,12 +1,12 @@
 import React from "react"; // Import user avatar image
 import aiLogo from "../assets/aiLogo.png";
-import React, { useContext } from "react";
-
+import { IoSend } from "react-icons/io5";
+import { useContext } from "react";
+import { Context } from "../context/Context";
 
 function ChatPage() {
-
-  const { onSent, showResult, loading, resultData, setinput, Input } = useContext(Context)
-
+  const { onSent, showResult, loading, resultData, setInput, input } =
+    useContext(Context);
 
   return (
     <div className="flex flex-col h-screen ">
@@ -53,23 +53,16 @@ function ChatPage() {
       <div className="flex items-center px-4 py-6 border-t border-gray-300">
         {" "}
         {/* Add border */}
-        <input
-  type="text"
-  className="w-full rounded-full pl-10 md:pl-4 md:px-2 md:py-4 focus:outline-none focus:border-cyan-700"
-  placeholder="Type your message..."
-  style={{ paddingLeft: "28px" }}
-/>
-
-        <button className="ml-2 rounded-full py-2 px-3 bg-cyan-700 text-white">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            viewBox="0 0 16 16"
-          >
-            <path d="M8 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H8zM4 4h8a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zM9 11H7v3a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-3z" />
-          </svg>
+        <input 
+          onChange={(e)=>setInput(e.target.value)} 
+          value={input}
+          type="text"
+          className="w-full rounded-full pl-10 md:pl-4 md:px-2 md:py-4 focus:outline-none focus:border-cyan-700"
+          placeholder="Type your message..."
+          style={{ paddingLeft: "28px" }}
+        />
+        <button onClick={()=>onSent()} className="ml-2 rounded-full py-2 px-2 bg-cyan-700 text-white">
+          <IoSend className="w-6 h-6" />
         </button>{" "}
         {/* Add microphone icon button */}
       </div>

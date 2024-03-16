@@ -2,10 +2,13 @@ import React from "react";
 import aiLogo from "../assets/aiLogo.png";
 import { CiCirclePlus, CiSettings } from "react-icons/ci";
 import { IoIosLogOut } from "react-icons/io";
+import { useContext } from 'react';
+import { Context } from "../context/Context";
+
 
 function SideBar() {
+  const { recentPrompt} = useContext(Context)
 
-  const {recentPrompt}
 
  
   return (
