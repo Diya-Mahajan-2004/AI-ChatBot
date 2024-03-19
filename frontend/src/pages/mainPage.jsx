@@ -1,6 +1,7 @@
 import React from "react";
 import SideBar from "../components/SideBar";
 import ChatPage from "./ChatPage";
+import HomePage from "./HomePage";
 
 function mainPage() {
   return (
@@ -12,7 +13,9 @@ function mainPage() {
           <p></p>
           <ChatPage/>
         </div>
+        
       </div>
+      <HomePage/>
     </div>
   );
 }
