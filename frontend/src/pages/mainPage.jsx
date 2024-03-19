@@ -5,6 +5,7 @@ import HomePage from "./HomePage";
 
 function mainPage() {
   return (
+    
     <div className="bg-gradient-to-r from-[#BAD5FF]/50 to-[#92e0f7]/50 h-screen">
       <div className="grid grid-cols-[1fr,3fr] w-full h-full">
         {" "}
@@ -17,6 +18,7 @@ function mainPage() {
       </div>
       <HomePage/>
     </div>
+    
   );
 }
 
