@@ -3,7 +3,7 @@ import SideBar from "../components/SideBar";
 import ChatPage from "./ChatPage";
 import HomePage from "./HomePage";
 
-function mainPage() {
+function MainPage() {
   return (
     
     <div className="bg-gradient-to-r from-[#BAD5FF]/50 to-[#92e0f7]/50 h-screen">
@@ -22,4 +22,4 @@ function mainPage() {
   );
 }
 
-export default mainPage;
+export default MainPage;
