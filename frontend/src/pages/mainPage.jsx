@@ -16,7 +16,7 @@ function MainPage() {
         </div>
         
       </div>
-      <HomePage/>
+     
     </div>
     
   );

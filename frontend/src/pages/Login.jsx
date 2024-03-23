@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"; // Import Link from React Router
 import aiLogo from "../assets/aiLogo.png";
 
 function Login() {
@@ -22,18 +23,18 @@ function Login() {
             <input type="checkbox" className="mr-2" />
             <label className="text-gray-700">Remember me</label>
           </div>
-          <a href="#" className="text-blue-500 ml-3 text-[0.75rem] hover:underline">
+          <Link to="/signup" className="text-blue-500 ml-3 text-[0.75rem] hover:underline">
             Forgot Password?
-          </a>
+          </Link>
         </div>
         <button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors">
           Log In
         </button>
         <p className="mt-4 text-sm text-gray-600">
           Don't have an account?{" "}
-          <a href="#" className="text-blue-500 hover:underline">
+          <Link to="/signup" className="text-blue-500 hover:underline">
             Sign Up
-          </a>
+          </Link>
         </p>
       </div>
     </div>
@@ -41,3 +42,4 @@ function Login() {
 }
 
 export default Login;
+
