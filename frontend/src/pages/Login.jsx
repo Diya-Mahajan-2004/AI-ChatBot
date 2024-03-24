@@ -1,8 +1,20 @@
 import React from "react";
-import { Link } from "react-router-dom"; // Import Link from React Router
+import { Link, useNavigate } from "react-router-dom";
 import aiLogo from "../assets/aiLogo.png";
 
 function Login() {
+  const navigate = useNavigate();
+
+  const handleLoginSubmit = async () => {
+    try {
+      // Perform login logic (await if needed)
+      // Example
+      navigate('/mainpage'); // Navigate to /mainpage on successful login
+    } catch (error) {
+      console.error("Login failed:", error);
+    }
+  };
+
   return (
     <div className="bg-gradient-to-r from-[#BAD5FF]/50 to-[#92e0f7]/50 h-screen flex justify-center items-center">
       <div className="bg-white p-8 rounded-lg shadow-md flex flex-col items-center">
@@ -27,7 +39,7 @@ function Login() {
             Forgot Password?
           </Link>
         </div>
-        <button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors">
+        <button onClick={handleLoginSubmit} className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors">
           Log In
         </button>
         <p className="mt-4 text-sm text-gray-600">
@@ -42,4 +54,3 @@ function Login() {
 }
 
 export default Login;
-

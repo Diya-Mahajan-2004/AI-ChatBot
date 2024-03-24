@@ -1,5 +1,6 @@
 import React from "react";
 import aiLogo from "../assets/aiLogo.png";
+import { Link } from "react-router-dom";
 import { CiCirclePlus, CiSettings } from "react-icons/ci";
 import { IoIosLogOut } from "react-icons/io";
 import { useContext } from "react";
@@ -64,7 +65,9 @@ function SideBar() {
           </div>
           <div className="flex items-center">
             <IoIosLogOut className="w-6 h-6" />
+            <Link to="/">
             <span className="ml-2 text-gray-700">Log out</span>
+            </Link>
           </div>
           <div className="flex items-center">
             <button className="rounded-full py-[9px] px-[15px] bg-cyan-700 text-white">
@@ -79,3 +82,4 @@ function SideBar() {
 }
 
 export default SideBar;
+

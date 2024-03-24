@@ -10,9 +10,12 @@ function App() {
     <Router>
       <Routes>
             {/* Using element prop (recommended for v6+) */}
-            <Route exact path="/" element={<HomePage />} /> 
+            <Route exact path="/" element={<HomePage />} />
+
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
+            
+            <Route  path="/mainpage" element={<MainPage />} /> 
         </Routes>
     </Router>
   );

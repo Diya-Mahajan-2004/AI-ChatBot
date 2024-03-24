@@ -1,7 +1,21 @@
 import React from "react";
+import { Link, useNavigate } from "react-router-dom";
 import aiLogo from "../assets/aiLogo.png";
 
 function Signup() {
+
+  const navigate = useNavigate();
+
+  const handleSignupSubmit = async () => {
+    try {
+      
+      navigate('/mainpage'); // Navigate to /mainpage on successful login
+    } catch (error) {
+      console.error("Signup failed:", error);
+    }
+  };
+
+
   return (
     <div className="bg-gradient-to-r from-[#BAD5FF]/50 to-[#92e0f7]/50 h-screen flex justify-center items-center">
       <div className="bg-white p-8 rounded-lg shadow-md flex flex-col items-center">
@@ -23,7 +37,7 @@ function Signup() {
             I agree to the terms and conditions
           </label>
         </div>
-        <button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors">
+        <button onClick={handleSignupSubmit} className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors">
           Submit
         </button>
       </div>

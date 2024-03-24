@@ -34,6 +34,7 @@ function HomePage() {
               alt="AI Logo"
             />
             <h2 className="text-4xl font-bold text-gray-800">Welcome to Spekky</h2>
+            <h3 className="text-xl text-gray-600">Your AI friend!</h3>
             <h3 className="text-xl text-gray-600">How can I assist you today?</h3>
             <div className="flex justify-center mt-8">
               <div>
