@@ -1,20 +1,33 @@
-import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import aiLogo from "../assets/aiLogo.png";
 
 function Signup() {
-
   const navigate = useNavigate();
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleSignupSubmit = async () => {
     try {
-      
-      navigate('/mainpage'); // Navigate to /mainpage on successful login
+      const response = await fetch("http://localhost:5173/signup", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          username: username,
+          password: password,
+        }),
+      });
+      if (response.ok) {
+        navigate("/mainpage");
+      } else {
+        console.error("Signup failed:", response.statusText);
+      }
     } catch (error) {
       console.error("Signup failed:", error);
     }
   };
-
 
   return (
     <div className="bg-gradient-to-r from-[#BAD5FF]/50 to-[#92e0f7]/50 h-screen flex justify-center items-center">
@@ -23,13 +36,18 @@ function Signup() {
         <h2 className="text-2xl font-semibold mb-4">Sign Up</h2>
         <input
           type="text"
-          placeholder="Enter your name"
+          name="username"
+          placeholder="Enter your username"
           className="w-full border border-gray-300 rounded-md px-4 py-2 mb-4"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
         />
         <input
-          type="email"
-          placeholder="Enter your email"
+          type="password"
+          placeholder="Enter your password"
           className="w-full border border-gray-300 rounded-md px-4 py-2 mb-4"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
         />
         <div className="flex items-center mb-4">
           <input type="checkbox" className="mr-2" />
@@ -37,7 +55,10 @@ function Signup() {
             I agree to the terms and conditions
           </label>
         </div>
-        <button onClick={handleSignupSubmit} className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors">
+        <button
+          onClick={handleSignupSubmit}
+          className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
+        >
           Submit
         </button>
       </div>
