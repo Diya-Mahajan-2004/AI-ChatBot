@@ -11,7 +11,7 @@ const app = express();
 app.use(cors());
 
 // Serve static files from the "frontend" directory
-app.use(express.static(path.join(__dirname, '../frontend')));
+app.use(express.static(path.join(__dirname, 'C:\Users\hp\Desktop\ChatApp\frontend')));
 
 // This will serve your static HTML file for any route that isn't explicitly handled by other routes
 app.get('*', (req, res) => {

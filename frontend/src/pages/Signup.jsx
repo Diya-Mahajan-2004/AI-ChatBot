@@ -21,9 +21,7 @@ function Signup() {
       });
       if (response.ok) {
         navigate("/mainpage");
-      } else {
-        console.error("Signup failed:", response.statusText);
-      }
+      } 
     } catch (error) {
       console.error("Signup failed:", error);
     }
