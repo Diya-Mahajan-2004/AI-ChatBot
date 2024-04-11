@@ -71,9 +71,9 @@ function SideBar() {
           </div>
           <div className="flex items-center">
             <button className="rounded-full py-[9px] px-[15px] bg-cyan-700 text-white">
-              N
+              D
             </button>
-            <span className="ml-2 text-gray-700">Name</span>
+            <span className="ml-2 text-gray-700">Diya</span>
           </div>
         </div>
       </div>
